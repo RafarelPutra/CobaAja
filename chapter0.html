@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FUTURE DESTINY</title>
+
+  <!-- Font Jepang Elegan & Romantis -->
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600&family=Kosugi+Maru&family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      background: url('GS.png') no-repeat center center/cover;
+      font-family: 'M PLUS Rounded 1c', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(2px);
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      max-width: 90vw;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1.title {
+      font-family: 'Shippori Mincho B1', serif;
+      font-weight: 600;
+      font-size: 8.2vw;
+      background: linear-gradient(90deg, #a6caff, #ffffff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+      margin-bottom: 1rem;
+    }
+
+    p.epilog {
+      font-family: 'Kosugi Maru', sans-serif;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #e0e0e0;
+      max-width: 700px;
+      margin-bottom: 2rem;
+    }
+
+    a.start-btn {
+      font-family: 'M PLUS Rounded 1c', sans-serif;
+      padding: 0.8rem 2.2rem;
+      background: white;
+      color: black;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(255,255,255,0.2);
+      cursor: pointer;
+    }
+
+    a.start-btn:hover {
+      background-color: #a6caff;
+      color: white;
+      box-shadow: 0 0 20px #a6caff;
+      transform: scale(1.05);
+    }
+
+    p.credit {
+      font-family: 'M PLUS Rounded 1c', sans-serif;
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
+      font-size: 0.9rem;
+      text-align: center;
+      opacity: 0.7;
+      z-index: 2;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <div class="content">
+    <h1 class="title">FUTURE DESTINY</h1>
+    <p class="epilog">"Kalau Cinta Itu Bisa Bicara, Aku Udah Ngomong Sama Kamu Dari Dulu"</p>
+    <a class="start-btn" onclick="goToChapter()">Mulai</a>
+  </div>
+
+  <p class="credit">Created by: Creespho Rafarel Putra</p>
+
+  <script>
+    function goToChapter() {
+      window.location.href = "chapter0,5.html";
+    }
+  </script>
+</body>
+</html>
