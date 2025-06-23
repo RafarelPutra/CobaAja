@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cerita Ceko</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --border-color: #000;
+    }
+
+    /* Global reset & background */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom right, #fff9f4, #f1f1f1), url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+      background-repeat: repeat;
+      background-size: contain;
+      color: #333;
+    }
+
+    /* Header dengan aksen nostalgia */
+    header {
+      background-color: #fff;
+      padding: 32px 0 20px;
+      text-align: center;
+      border-bottom: 2px dashed #aaa;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      position: relative;
+    }
+
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 42px;
+      color: #444;
+      margin: 0;
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      display: block;
+      width: 120px;
+      height: 3px;
+      background: #444;
+      margin: 14px auto 0;
+      border-radius: 2px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .story-list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .story-panel {
+      display: flex;
+      align-items: center;
+      padding: 20px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 4px 4px 0 var(--border-color);
+      border: 2px solid var(--border-color);
+      position: relative;
+      overflow: hidden;
+      background: #fffaf6;
+    }
+
+    .story-panel::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at top left, rgba(255,255,255,0.2), transparent);
+      pointer-events: none;
+    }
+
+    .story-panel:hover {
+      transform: translateY(-4px);
+      box-shadow: 6px 6px 0 var(--border-color);
+      filter: brightness(1.03);
+    }
+
+    .story-image {
+      width: 100px;
+      height: 100px;
+      background-size: cover;
+      background-position: center;
+      margin-right: 24px;
+      border-radius: 8px;
+      border: 2px solid var(--border-color);
+      flex-shrink: 0;
+    }
+
+    .story-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .story-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .story-epilog {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    /* Panel 1: Future Destiny */
+    .panel-dilan1990 {
+      background-color: #6daec1;
+      font-family: 'Patrick Hand', cursive;
+      color: #fff;
+      border-color: #2e5a65;
+    }
+
+    .panel-dilan1990 .story-title,
+    .panel-dilan1990 .story-epilog {
+      color: #fff;
+    }
+
+    /* Panel 2: Tahun 1990 */
+    .panel-dilan1991 {
+      background-color: #c48e64;
+      font-family: 'Patrick Hand', cursive;
+      color: #fff;
+      border-color: #905e32;
+    }
+
+    .panel-dilan1991 .story-title,
+    .panel-dilan1991 .story-epilog {
+      color: #fff;
+    }
+
+    /* Panel 3: Ancika */
+    .panel-ancika {
+      background-color: #ce4d4d;
+      font-family: 'Roboto', sans-serif;
+      color: #fff;
+      border-color: #992e2e;
+    }
+
+    .panel-ancika .story-title,
+    .panel-ancika .story-epilog {
+      color: #fff;
+    }
+
+    /* Responsif: tetap horizontal */
+    @media (max-width: 600px) {
+      .story-panel {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .story-image {
+        margin-right: 16px;
+      }
+
+      .story-text {
+        text-align: left;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Cerita Ceko</h1>
+  </header>
+
+  <div class="container">
+    <div class="story-list">
+
+      <!-- Panel 1 -->
+      <a class="story-panel panel-dilan1990" href="chapter0.html">
+        <div class="story-image" style="background-image: url('GS.png');"></div>
+        <div class="story-text">
+          <div class="story-title">Future Destiny</div>
+          <div class="story-epilog">Kalau Cinta Itu Bisa Bicara, Aku Udah Ngomong Sama Kamu Dari Dulu</div>
+        </div>
+      </a>
+
+      <!-- Panel 2 -->
+      <a class="story-panel panel-dilan1991" href="https://link-cerita-2.com">
+        <div class="story-image" style="background-image: url('gambar-kamu2.jpg');"></div>
+        <div class="story-text">
+          <div class="story-title">Tahun 1990</div>
+          <div class="story-epilog">Cinta itu indah. Jika bagimu tidak, mungkin karena salah memilih pasangan.</div>
+        </div>
+      </a>
+
+      <!-- Panel 3 -->
+      <a class="story-panel panel-ancika" href="https://link-cerita-3.com">
+        <div class="story-image" style="background-image: url('gambar-kamu3.jpg');"></div>
+        <div class="story-text">
+          <div class="story-title">Ancika 1996</div>
+          <div class="story-epilog">Cika, kisah setelah Milea. Saat masa lalu mulai mereda.</div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+</body>
+</html>
